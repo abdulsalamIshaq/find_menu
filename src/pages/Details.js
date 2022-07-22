@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Details() {
     return (
         <div className="md:w-1/2 md:m-auto">
-            <div className="py-6">
+            <div className="p-4">
                 <Link to="/"
                     className="bg-transparent text-secondary text-sm py-2 px-4 border border-secondary rounded-full my-2">
                     <i className="fa-solid fa-angle-left"></i> Back
