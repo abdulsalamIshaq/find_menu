@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Menus from "../components/Menus";
+import MenusComponet from "../components/MenusComponet";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -18,14 +18,14 @@ function Home() {
 
                     <div className="flex flex-row content-center flex-wrap justify-between md:justify-center mt-8">
                         <div className="share mr-2">
-                            <a href="#"
+                            <Link to="#"
                                 className="bg-transparent text-black text-sm py-2 px-4 border border-black rounded-full mr-2">
                                 <i className="fa-solid fa-share-nodes"></i> Share
-                            </a>
-                            <a href="#"
+                            </Link>
+                            <Link to="#"
                                 className="bg-transparent text-black text-sm py-2 px-4 border border-black rounded-full">
                                 <i className="fa-solid fa-location-dot"></i> Map
-                            </a>
+                            </Link>
                         </div>
                         <div className="category">
                             <Link to="/categories"
@@ -42,10 +42,10 @@ function Home() {
             </div>
 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 md:gap-8 md:p-6">
-                <Menus />
-                <Menus />
-                <Menus />
-                <Menus />
+                <MenusComponet />
+                <MenusComponet />
+                <MenusComponet />
+                <MenusComponet />
             </div>
 
             {/* <div className={`${(!bottomBar) ? 'hidden' : '' } w-full z-20 px-8 py-5 bg-dutchWhite bottom-0 fixed position:static rounded-t-3xl`} style={{ minHeight: '50%' }}>
@@ -53,140 +53,142 @@ function Home() {
 
                 </div>
             </div> */}
-            <div className={`navigation w-full z-20 px-8 py-5 ${(bottomBar) ? 'bg-dutchWhite' : 'bg-dutchWhite'} bottom-0 fixed  overflow-auto rounded-t-3xl`}
+            <div className={`navigation w-full pt-8 z-20 px-8 py-5 ${(bottomBar) ? 'bg-dutchWhite' : 'bg-dutchWhite'} bottom-0 fixed  rounded-t-3xl`}
                 style={(bottomBar) ? { minHeight: '65%', maxHeight: '65%' } : {}}>
-                <div className={`flex justify-between content-center md:justify-between ${(bottomBar) ? 'pb-2 border-b border-secondary' : ''}`}>
-                    <div className="leading-tight not-italic tracking-tighter md:text-xl">
-                        <p className="font-semibold">Bookmarked Meals</p>
-                        <p className="">Hazelnut Cheescake + 3</p>
+                <div className='overflow-y-scroll'>
+                    <div className={`flex justify-between content-center md:justify-between ${(bottomBar) ? 'pb-2 border-b border-secondary' : ''}`}>
+                        <div className="leading-tight not-italic tracking-tighter md:text-xl">
+                            <p className="font-semibold">Bookmarked Meals</p>
+                            <p className="">Hazelnut Cheescake + 3</p>
+                        </div>
+                        <div className="align-middle cursor-pointer text-xl" onClick={() => { setBottomBar(!bottomBar) }}>
+                            {(bottomBar)
+                                ? <i className="fa-solid fa-circle-arrow-down"></i>
+                                : <i className="fa-solid fa-circle-arrow-up"></i>
+                            }
+                        </div>
                     </div>
-                    <div className="align-middle cursor-pointer text-xl" onClick={() => { setBottomBar(!bottomBar) }}>
-                        {(bottomBar)
-                            ? <i className="fa-solid fa-circle-arrow-down"></i>
-                            : <i className="fa-solid fa-circle-arrow-up"></i>
-                        }
-                    </div>
+                    {(bottomBar) ?
+                        <>
+                            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 md:gap-8 md:p-6">
+                                <div className="bottom-list border-b border-black">
+                                    <div className="px-0 py-3 md:p-0">
+                                        <div className="">
+                                            {/* <div className="w-48"> */}
+                                            <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
+                                            {/* </div> */}
+                                        </div>
+                                        <div className="content py-2 font-normal">
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                ut
+                                                labore et dolore magna aliqua.
+                                            </span>
+                                        </div>
+                                        <span className="text-sm small font-normal">
+                                            N12,300.00
+                                            <small className="ml-2 small">+7.5% Vat</small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="bottom-list border-b border-black">
+                                    <div className="px-0 py-3 md:p-0">
+                                        <div className="">
+                                            {/* <div className="w-48"> */}
+                                            <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
+                                            {/* </div> */}
+                                        </div>
+                                        <div className="content py-2 font-normal">
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                ut
+                                                labore et dolore magna aliqua.
+                                            </span>
+                                        </div>
+                                        <span className="text-sm small font-normal">
+                                            N12,300.00
+                                            <small className="ml-2 small">+7.5% Vat</small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="bottom-list border-b border-black">
+                                    <div className="px-0 py-3 md:p-0">
+                                        <div className="">
+                                            {/* <div className="w-48"> */}
+                                            <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
+                                            {/* </div> */}
+                                        </div>
+                                        <div className="content py-2 font-normal">
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                ut
+                                                labore et dolore magna aliqua.
+                                            </span>
+                                        </div>
+                                        <span className="text-sm small font-normal">
+                                            N12,300.00
+                                            <small className="ml-2 small">+7.5% Vat</small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="bottom-list border-b border-black">
+                                    <div className="px-0 py-3 md:p-0">
+                                        <div className="">
+                                            {/* <div className="w-48"> */}
+                                            <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
+                                            {/* </div> */}
+                                        </div>
+                                        <div className="content py-2 font-normal">
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                ut
+                                                labore et dolore magna aliqua.
+                                            </span>
+                                        </div>
+                                        <span className="text-sm small font-normal">
+                                            N12,300.00
+                                            <small className="ml-2 small">+7.5% Vat</small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="bottom-list border-b border-black">
+                                    <div className="px-0 py-3 md:p-0">
+                                        <div className="">
+                                            {/* <div className="w-48"> */}
+                                            <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
+                                            {/* </div> */}
+                                        </div>
+                                        <div className="content py-2 font-normal">
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                ut
+                                                labore et dolore magna aliqua.
+                                            </span>
+                                        </div>
+                                        <span className="text-sm small font-normal">
+                                            N12,300.00
+                                            <small className="ml-2 small">+7.5% Vat</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='py-4 flex flex-col text-xl'>
+                                <div className='flex flex-row justify-between border-b border-dashed border-black'>
+                                    <span>Meal Amount</span>
+                                    <span>N 36,600</span>
+                                </div>
+                                <div className='flex flex-row justify-between border-b border-dashed border-black'>
+                                    <span>Tax(7.2% Vat)</span>
+                                    <span>N 3,600</span>
+                                </div>
+                                <div className='flex flex-row justify-between border-b border-dashed border-black font-bold'>
+                                    <span>Total Amount</span>
+                                    <span>N 39,600</span>
+                                </div>
+                            </div>
+                        </>
+                        : ''
+                    }
                 </div>
-                {(bottomBar) ?
-                    <>
-                        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 md:gap-8 md:p-6">
-                            <div className="bottom-list border-b border-black">
-                                <div className="px-0 py-3 md:p-0">
-                                    <div className="">
-                                        {/* <div className="w-48"> */}
-                                        <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
-                                        {/* </div> */}
-                                    </div>
-                                    <div className="content py-2 font-normal">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                            ut
-                                            labore et dolore magna aliqua.
-                                        </span>
-                                    </div>
-                                    <span className="text-sm small font-normal">
-                                        N12,300.00
-                                        <small className="ml-2 small">+7.5% Vat</small>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div className="bottom-list border-b border-black">
-                                <div className="px-0 py-3 md:p-0">
-                                    <div className="">
-                                        {/* <div className="w-48"> */}
-                                        <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
-                                        {/* </div> */}
-                                    </div>
-                                    <div className="content py-2 font-normal">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                            ut
-                                            labore et dolore magna aliqua.
-                                        </span>
-                                    </div>
-                                    <span className="text-sm small font-normal">
-                                        N12,300.00
-                                        <small className="ml-2 small">+7.5% Vat</small>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div className="bottom-list border-b border-black">
-                                <div className="px-0 py-3 md:p-0">
-                                    <div className="">
-                                        {/* <div className="w-48"> */}
-                                        <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
-                                        {/* </div> */}
-                                    </div>
-                                    <div className="content py-2 font-normal">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                            ut
-                                            labore et dolore magna aliqua.
-                                        </span>
-                                    </div>
-                                    <span className="text-sm small font-normal">
-                                        N12,300.00
-                                        <small className="ml-2 small">+7.5% Vat</small>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div className="bottom-list border-b border-black">
-                                <div className="px-0 py-3 md:p-0">
-                                    <div className="">
-                                        {/* <div className="w-48"> */}
-                                        <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
-                                        {/* </div> */}
-                                    </div>
-                                    <div className="content py-2 font-normal">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                            ut
-                                            labore et dolore magna aliqua.
-                                        </span>
-                                    </div>
-                                    <span className="text-sm small font-normal">
-                                        N12,300.00
-                                        <small className="ml-2 small">+7.5% Vat</small>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div className="bottom-list border-b border-black">
-                                <div className="px-0 py-3 md:p-0">
-                                    <div className="">
-                                        {/* <div className="w-48"> */}
-                                        <h1 className="text-2xl font-medium">Sea Food Boiled Pasta With Chicken</h1>
-                                        {/* </div> */}
-                                    </div>
-                                    <div className="content py-2 font-normal">
-                                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                            ut
-                                            labore et dolore magna aliqua.
-                                        </span>
-                                    </div>
-                                    <span className="text-sm small font-normal">
-                                        N12,300.00
-                                        <small className="ml-2 small">+7.5% Vat</small>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='py-4 flex flex-col text-xl'>
-                            <div className='flex flex-row justify-between border-b border-dashed border-black'>
-                                <span>Meal Amount</span>
-                                <span>N 36,600</span>
-                            </div>
-                            <div className='flex flex-row justify-between border-b border-dashed border-black'>
-                                <span>Tax(7.2% Vat)</span>
-                                <span>N 3,600</span>
-                            </div>
-                            <div className='flex flex-row justify-between border-b border-dashed border-black font-bold'>
-                                <span>Total Amount</span>
-                                <span>N 39,600</span>
-                            </div>
-                        </div>
-                    </>
-                    : ''
-                }
             </div>
         </div>
     );

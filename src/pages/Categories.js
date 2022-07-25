@@ -9,81 +9,81 @@ function Categories() {
             </form>
             <div className="categories flex flex-col pt-4 font-normal text-secondary">
                 <div className="category py-4 border-dashed border-b border-secondary">
-                    <a href="#" className="flex flex-row justify-between">
+                    <Link to="#" className="flex flex-row justify-between">
                         <span className="text-3xl">Pasta</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
                 <div className="category py-4 border-dashed border-b border-secondary">
 
-                    <a href="#" className="flex flex-row justify-between">
+                    <Link to="#" className="flex flex-row justify-between">
                         <span className="text-3xl">Rice Meals</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="category py-4 border-dashed border-b border-secondary">
-                    <a href="#" className="flex flex-row justify-between">
+                    <Link to="#" className="flex flex-row justify-between">
                         <span className="text-3xl">Sides</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="category py-4 border-dashed border-b border-secondary">
-                    <a href="#" className="flex flex-row justify-between">
+                    <Link to="#" className="flex flex-row justify-between">
                         <span className="text-3xl">Sea Food</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="category py-4 border-dashed border-b border-secondary">
-                    <a href="#" className="flex flex-row justify-between">
+                    <Link to="#" className="flex flex-row justify-between">
                         <span className="text-3xl">Italian</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="category py-4 border-dashed border-b border-secondary">
-                    <a href="#" className="flex flex-row justify-between">
+                    <Link to="#" className="flex flex-row justify-between">
                         <span className="text-3xl">Thai</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="category py-4 border-dashed border-b border-secondary">
-                    <a href="#" className="flex flex-row justify-between">
+                    <Link to="#" className="flex flex-row justify-between">
                         <span className="text-3xl">Desert</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="category py-4 border-dashed border-b border-secondary">
-                    <a href="#" className="flex flex-row justify-between">
+                    <Link to="#" className="flex flex-row justify-between">
                         <span className="text-3xl">Juice</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="category py-4 border-dashed border-b border-secondary">
-                    <a href="#" className="category flex flex-row justify-between">
+                    <Link to="#" className="category flex flex-row justify-between">
                         <span className="text-3xl">Moctails</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="category py-4 border-dashed border-b border-secondary">
-                    <a href="#" className="category flex flex-row justify-between">
+                    <Link to="#" className="category flex flex-row justify-between">
                         <span className="text-3xl">Coctails</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="category py-4 border-dashed border-b border-secondary">
 
-                    <a href="#" className="category flex flex-row justify-between">
+                    <Link to="#" className="category flex flex-row justify-between">
                         <span className="text-3xl">Soft Drinks</span>
                         <span className="text-md font-satoshi">05</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

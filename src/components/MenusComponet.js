@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Menus() 
+function MenusComponet() 
 {
     return (
         <div className="menu-list">
@@ -38,4 +38,4 @@ function Menus()
     );
 }
 
-export default Menus;
+export default MenusComponet;
