@@ -12,7 +12,8 @@
 }
 
 /* bottom bar style */
-/* .bottom-bar {
+.bottom-bar {
+    height: auto;
     min-height: 80px; 
     max-height: 65%;
-} */
+}
