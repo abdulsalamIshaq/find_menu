@@ -48,7 +48,7 @@ function Home() {
                 <MenusComponet />
             </div>
             <div className='overflow-hidden'>
-                <div className={`bottom-bar overflow-y-scroll no-scrollbar w-full bg-dutchWhite bottom-0 fixed rounded-t-3xl`}>
+                <div className={`bottom-bar overflow-y-scroll no-scrollbar w-full bg-dutchWhite bottom-0 fixed rounded-t-3xl`} style={(bottomBar) ? { height: "65%"}: { height: "80px" }}>
                     <div className={`fixed w-full z-20 px-8 py-4 items-center bg-inherit flex justify-between content-center md:justify-between rounded-t-3xl ${(bottomBar) ? 'pb-2 border-b border-secondary' : ''}`}>
                         <div className="leading-tight not-italic tracking-tighter md:text-xl">
                             <p className="font-semibold">Bookmarked Meals</p>
