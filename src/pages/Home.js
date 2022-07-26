@@ -47,16 +47,9 @@ function Home() {
                 <MenusComponet />
                 <MenusComponet />
             </div>
-
-            {/* <div className={`${(!bottomBar) ? 'hidden' : '' } w-full z-20 px-8 py-5 bg-dutchWhite bottom-0 fixed position:static rounded-t-3xl`} style={{ minHeight: '50%' }}>
-                <div className="">
-
-                </div>
-            </div> */}
-            <div className={`navigation w-full pt-8 z-20 px-8 py-5 ${(bottomBar) ? 'bg-dutchWhite' : 'bg-dutchWhite'} bottom-0 fixed  rounded-t-3xl`}
-                style={(bottomBar) ? { minHeight: '65%', maxHeight: '65%' } : {}}>
-                <div className='overflow-y-scroll'>
-                    <div className={`flex justify-between content-center md:justify-between ${(bottomBar) ? 'pb-2 border-b border-secondary' : ''}`}>
+            <div className='overflow-hidden'>
+                <div className={`bottom-bar overflow-y-scroll no-scrollbar w-full bg-dutchWhite bottom-0 fixed rounded-t-3xl`}>
+                    <div className={`fixed w-full z-20 px-8 py-4 items-center bg-inherit flex justify-between content-center md:justify-between rounded-t-3xl ${(bottomBar) ? 'pb-2 border-b border-secondary' : ''}`}>
                         <div className="leading-tight not-italic tracking-tighter md:text-xl">
                             <p className="font-semibold">Bookmarked Meals</p>
                             <p className="">Hazelnut Cheescake + 3</p>
@@ -68,9 +61,10 @@ function Home() {
                             }
                         </div>
                     </div>
+
                     {(bottomBar) ?
-                        <>
-                            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 md:gap-8 md:p-6">
+                        <div className='px-8 py-5'>
+                            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 md:gap-8 mt-16 md:py-6">
                                 <div className="bottom-list border-b border-black">
                                     <div className="px-0 py-3 md:p-0">
                                         <div className="">
@@ -185,7 +179,7 @@ function Home() {
                                     <span>N 39,600</span>
                                 </div>
                             </div>
-                        </>
+                        </div>
                         : ''
                     }
                 </div>
